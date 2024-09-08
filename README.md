@@ -43,8 +43,8 @@ My main inspiration comes from the [Getting Started Notebook](https://github.com
 After creating the modelling table I wanted to reduce the memory of the dataframe.
 * Before and After:
 <p align="center">
-  <img src="https://i.imgur.com/O9Gp9ox.png" width="450"/>
-  <img src="https://i.imgur.com/kvRwmWH.png" width="450"/>
+  <img src="https://i.imgur.com/O9Gp9ox.png" width="350"/>
+  <img src="https://i.imgur.com/kvRwmWH.png" width="350"/>
 </p>
 
 ### Dealing with missing values
