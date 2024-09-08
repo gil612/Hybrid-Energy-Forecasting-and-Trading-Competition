@@ -1,7 +1,7 @@
 # The task's purpose
 The project will process and document the forecasting track and the trading track of the Hybrid Energy Forecasting and Trading Competition, with the focus on the forecasting track. To do this, the typical process steps of a data science project will be completed. This first involves understanding the problem. The basis for this is the documentation provided by the competition and, if applicable, the sources referenced therein. Please use the Internet to find out more about the topic of electricity markets. A thorough preparatory data analysis and comprehensible documentation of the procedure are also part of the project.
 
-In this Readme file I will present the first two phases of `CRISP-DM` [Cross-industry standard process for data mining] and part of the 3rd pahse:
+In this Readme file I will cover the first two phases of `CRISP-DM` [Cross-industry standard process for data mining] and part of the 3rd pahse:
 * Business understanding
 * Data understanding
 * Data preparation
@@ -41,8 +41,33 @@ This section contains data cleaning, setting columns types and Exploratory data 
 My main inspiration comes from the [Getting Started Notebook](https://github.com/jbrowell/HEFTcom24/blob/main/Getting%20Started.ipynb) that was presented at the competition
 
 After creating the modelling table I wanted to reduce the memory of the dataframe.
-* Before: &nbsp 3
+* Before and After:
 <p align="center">
   <img src="https://i.imgur.com/O9Gp9ox.png" width="450"/>
   <img src="https://i.imgur.com/kvRwmWH.png" width="450"/>
 </p>
+
+### Dealing with missing values
+Rows with NaN values were dropped with `dropna()` function
+
+### Removing outliers
+Each columns' values above quantile 0.99 were set to their mean value.
+
+### Dealing with duplicated rows
+removed with `modelling_table.drop(modelling_table[modelling_table.duplicated()].index)`
+
+## EDA
+
+
+<p align="center">
+  <img src="https://i.imgur.com/rx4c17M.png"/>
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/TaPTB5j.png"/>
+</p>
+
+
+
+
+
